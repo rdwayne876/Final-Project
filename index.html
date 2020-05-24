@@ -9,11 +9,54 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     
-	<title>Yahsuh JA</title>
+	<title>Find It </title>
 </head>
 
 <body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Find It</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle Navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="">Explore</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="">Pages</a>
+					</li>
+				</ul>
+
+				<span class="navbar-text">
+					<a href="">Sign In </a>
+				</span>
+				<button class="btn btn-sm btn-primary" type="button">+ Add Listing</button>				
+			</div>
+		</div>
+	</nav>
+
+	<header class="hero-image">
+		<div class="hero-form">
+			<div class="input-group md-form form-sm form-1 pl-0">
+				<div class="input-group-prepend">
+					<span class="input-group-text cyan lighten-2" id="searchTerm">
+						<i class="fas fa-search text-white" aria-hidden="true"></i>
+					</span>	
+				</div>
+				<input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
+			</div>
+		</div>
+	</header>
 
 	<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
