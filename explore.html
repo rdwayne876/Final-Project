@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    
+	<title>Find It </title>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Find It</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle Navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Home</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Explore<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="">Pages</a>
+					</li>
+				</ul>
+
+				<span class="navbar-text">
+					<a href="">Sign In </a>
+				</span>
+				<button class="btn btn-sm btn-primary" type="button">+ Add Listing</button>				
+			</div>
+		</div>
+	</nav>
+
+	<header class="hero-image">
+		
+	</header>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3 sticky">
+				<div class="card border-secondary mb-3">
+					<div class="card-body text-center justify-content-center">
+						<form class="input-group input-group-sm mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="searchTerm">
+									<i class="fa fa-search text-white" aria-hidden="true"></i>
+								</span>	
+							</div>
+							<input class="form-control" type="search" placeholder="Keywords" aria-label="Search">
+						</form>
+						<div class="input-group input-group-sm align-items-center mb-3">
+							<div class="input-group-prepend">
+								<button class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<span class="sr-only">Toggle Dropdown</span>
+								</button>
+								<div class="dropdown-menu" id="categoryDropdown">
+									<a class="dropdown-item" href="#">Shopping</a>
+									<a class="dropdown-item" href="#">Auto</a>
+									<a class="dropdown-item" href="#">Food and Drink</a>
+									<a class="dropdown-item" href="#">Hotels</a>
+								</div>
+								<input type="Search" id="categories" onkeyup="filterFunction()" class="form-control" aria-label="Category" placeholder="Category"> 
+							</div>		
+						</div>
+						<form>
+							<div class="form-group align-items-center">
+								<label for="formControlRange">Radius</label>
+								<input type="range" class="form-control-range" id="radius" name="">
+							</div>
+						</form>
+						<h5 class="card-title"> Advanced Options</h5>
+					</div>
+					<div class="card-body">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="" id="filter1">
+							<label class="form-check-label" for="filter1">Wi-Fi</label>
+						</div>
+
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="" id="filter1">
+							<label class="form-check-label" for="filter1">Parking Available</label>
+						</div>
+
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="" id="filter1">
+							<label class="form-check-label" for="filter1">Pet Friendly</label>
+						</div>
+
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="" id="filter1">
+							<label class="form-check-label" for="filter1">24 Hours</label>
+						</div>
+
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="" id="filter1">
+							<label class="form-check-label" for="filter1">Child Friendly</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-9">
+				<div class="row row-cols-1 row-cols-md-2">
+					<div class="col mb-4">
+						<div class="card border-secondary mb-3">
+							<img src="..." class="card-img-top" alt="...">
+							<div class="card-body">
+								<div>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+								</div>
+								<h5 class="card-title">Card Title</h5>
+								<p class="card-text">Brief description text goes here</p>
+								<div>
+									<p class="card-text"><i class="fa fa-map-marker"> Address goes here</i><span class=" card-text text-right"><i class="fa fa-phone"></i> +1 876 354 7211</p></span>
+								</div>
+							</div>
+							<div class="card-footer d-flex justify-content-between">
+								<div class="flex-row mb-3">
+									<p class="card-text"><i class="fa fa-bed"></i> Hotel</p>
+								</div>
+								<div class="flex-row-reverse">
+									<p class="card-text">Open Now</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col mb-4">
+						<div class="card border-secondary mb-3">
+							<img src="..." class="card-img-top" alt="...">
+							<div class="card-body">
+								<div>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+								</div>
+								<h5 class="card-title">Card Title</h5>
+								<p class="card-text">Brief description text goes here</p>
+								<div>
+									<p class="card-text"><i class="fa fa-map-marker"> Address goes here</i><span class=" card-text text-right"><i class="fa fa-phone"></i> +1 876 354 7211</p></span>
+								</div>
+							</div>
+							<div class="card-footer d-flex justify-content-between">
+								<div class="flex-row mb-3">
+									<p class="card-text"><i class="fa fa-bed"></i> Hotel</p>
+								</div>
+								<div class="flex-row-reverse">
+									<p class="card-text">Open Now</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col mb-4">
+						<div class="card border-secondary mb-3">
+							<img src="..." class="card-img-top" alt="...">
+							<div class="card-body">
+								<div>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+								</div>
+								<h5 class="card-title">Card Title</h5>
+								<p class="card-text">Brief description text goes here</p>
+								<div>
+									<p class="card-text"><i class="fa fa-map-marker"> Address goes here</i><span class=" card-text text-right"><i class="fa fa-phone"></i> +1 876 354 7211</p></span>
+								</div>
+							</div>
+							<div class="card-footer d-flex justify-content-between">
+								<div class="flex-row mb-3">
+									<p class="card-text"><i class="fa fa-bed"></i> Hotel</p>
+								</div>
+								<div class="flex-row-reverse">
+									<p class="card-text">Open Now</p>
+								</div>
+							</div>
+						</div>
+					</div><div class="col mb-4">
+						<div class="card border-secondary mb-3">
+							<img src="..." class="card-img-top" alt="...">
+							<div class="card-body">
+								<div>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+								</div>
+								<h5 class="card-title">Card Title</h5>
+								<p class="card-text">Brief description text goes here</p>
+								<div>
+									<p class="card-text"><i class="fa fa-map-marker"> Address goes here</i><span class=" card-text text-right"><i class="fa fa-phone"></i> +1 876 354 7211</p></span>
+								</div>
+							</div>
+							<div class="card-footer d-flex justify-content-between">
+								<div class="flex-row mb-3">
+									<p class="card-text"><i class="fa fa-bed"></i> Hotel</p>
+								</div>
+								<div class="flex-row-reverse">
+									<p class="card-text">Open Now</p>
+								</div>
+							</div>
+						</div>
+					</div><div class="col mb-4">
+						<div class="card border-secondary mb-3">
+							<img src="..." class="card-img-top" alt="...">
+							<div class="card-body">
+								<div>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+								</div>
+								<h5 class="card-title">Card Title</h5>
+								<p class="card-text">Brief description text goes here</p>
+								<div>
+									<p class="card-text"><i class="fa fa-map-marker"> Address goes here</i><span class=" card-text text-right"><i class="fa fa-phone"></i> +1 876 354 7211</p></span>
+								</div>
+							</div>
+							<div class="card-footer d-flex justify-content-between">
+								<div class="flex-row mb-3">
+									<p class="card-text"><i class="fa fa-bed"></i> Hotel</p>
+								</div>
+								<div class="flex-row-reverse">
+									<p class="card-text">Open Now</p>
+								</div>
+							</div>
+						</div>
+					</div><div class="col mb-4">
+						<div class="card border-secondary mb-3">
+							<img src="..." class="card-img-top" alt="...">
+							<div class="card-body">
+								<div>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+								</div>
+								<h5 class="card-title">Card Title</h5>
+								<p class="card-text">Brief description text goes here</p>
+								<div>
+									<p class="card-text"><i class="fa fa-map-marker"> Address goes here</i><span class=" card-text text-right"><i class="fa fa-phone"></i> +1 876 354 7211</p></span>
+								</div>
+							</div>
+							<div class="card-footer d-flex justify-content-between">
+								<div class="flex-row mb-3">
+									<p class="card-text"><i class="fa fa-bed"></i> Hotel</p>
+								</div>
+								<div class="flex-row-reverse">
+									<p class="card-text">Open Now</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+        <div class="container">
+            <div class="row">             
+                <div class="col-4 offset-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="./aboutus.html">About</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="./contactus.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+		              876 Somewhere Street<br>
+		              Some Town, Some City<br>
+		              Jamaica<br>
+		              <i class="fa fa-phone fa-lg"></i>: +1 876 354 7211<br>
+		              <i class="fa fa-fax fa-lg"></i>: +1 876 354 7211<br>
+		              <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:find@it.com">find@it.com</a>
+		           </address>
+                </div>
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                    </div>
+
+                </div>
+           </div>
+           <div class="row justify-content-center">             
+                <div class="col-auto">
+                    <p>© Copyright 2020 Find It</p>
+                </div>
+           </div>
+        </div>
+    </footer>
+
+	<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="js/scripts.js"></script>
+    
+</body>
+
+</html>
