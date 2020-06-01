@@ -17,9 +17,11 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-default bg-dark fixed-top scrolling-navbar">
 		<div class="container">
-			<a class="navbar-brand" href="index.html">Find It</a>
+			<a class="navbar-brand" href="index.html">
+				<img src="/img/LogoMakr_8n4M9q.png" width="160" height="80" class="d-inline-block align-top" alt="" loading="lazy">
+			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle Navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -33,11 +35,11 @@
 						<a class="nav-link" href="explore.html">Explore</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="">Pages</a>
+						<a class="nav-link" href="page.html">Pages</a>
 					</li>
 				</ul>
 
-				<span class="navbar-text">
+				<span class="navbar-text pr-3">
 					<a href="">Sign In </a>
 				</span>
 				<button class="btn btn-sm btn-primary" type="button">+ Add Listing</button>				
@@ -46,15 +48,17 @@
 	</nav>
 
 	<header class="hero-image">
-		<div class="hero-form">
-			<form class="input-group md-form form-sm form-1 pl-0 just">
-				<div class="input-group-prepend">
-					<span class="input-group-text cyan lighten-2" id="searchTerm">
-						<i class="fa fa-search text-white" aria-hidden="true"></i>
-					</span>	
+		<div class="hero-div">
+			<div class="container-fluid">
+				<div class="cntr">
+					<div class="cntr-innr">
+					<label class="search" for="inpt_search">
+							<input id="inpt_search" type="text" />
+						</label>
+						<p class="p-search">What do you want to do next?</p>
+					</div>
 				</div>
-				<input class="form-control" type="text" placeholder="Search" aria-label="Search">
-			</form>
+			</div>
 		</div>
 	</header>
 
@@ -63,43 +67,50 @@
 		<div class="row row-header">
 			<div class=" col-12 col-sm text-center">
 				<h3>Featured Categories</h3>
-				<hr>
 			</div>
 		</div>
 
 		<div class="row-content">
 			<div class="card-deck">
-				<div class="card bg-light border-danger text-center">
+				<div class="card card-featured bg-light  text-center">
+					<i class="fa fa-featured fa-shopping-bag fa-4x"></i>
 					<div class="card-title">
-						<i class="fa fa-shopping-bag fa-4x"></i>
+						<h4>Shopping</h4>						
 					</div>
-					<div class="card-body">
-						<p class="card-text">Shopping</p>
+					<div class="text-featured">
+						<span class="span-featured">ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span> 
 					</div>
+					<a class="a-featured" href="#">Learn More</a>
 				</div>
-				<div class="card bg-light border-danger text-center">
+				<div class="card card-featured bg-light text-center">
+					<i class="fa fa-featured fa-car fa-4x"></i>
 					<div class="card-title">
-						<i class="fa fa-car fa-4x"></i>
+						<h4>Auto</h4>						
 					</div>
-					<div class="card-body">
-						<p class="card-text">Auto</p>
+					<div class="text-featured">
+						<span class="span-featured">ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span> 
 					</div>
+					<a class="a-featured" href="#">Learn More</a>
 				</div>
-				<div class="card bg-light border-danger text-center">
+				<div class="card card-featured bg-light text-center">
+					<i class="fa fa-featured fa-cutlery fa-4x"></i>
 					<div class="card-title">
-						<i class="fa fa-cutlery fa-4x"></i>
+						<h4>Dining</h4>						
 					</div>
-					<div class="card-body">
-						<p class="card-text">Food and Drink</p>
+					<div class="text-featured">
+						<span class="span-featured">ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span> 
 					</div>
+					<a class="a-featured" href="#">Learn More</a>
 				</div>
-				<div class="card bg-light border-danger text-center">
+				<div class="card card-featured bg-light  text-center">
+					<i class="fa fa-featured fa-bed fa-4x"></i>
 					<div class="card-title">
-						<i class="fa fa-bed fa-4x"></i>
+						<h4>Hotels</h4>						
 					</div>
-					<div class="card-body">
-						<p class="card-text">Hotels</p>
+					<div class="text-featured">
+						<span class="span-featured">ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span> 
 					</div>
+					<a class="a-featured" href="#">Learn More</a>
 				</div>
 			</div> 
 		</div>
@@ -107,7 +118,6 @@
 		<div class="row row-header">
 			<div class=" col-12 col-sm text-center">
 				<h3>Most Popular Listings</h3>
-				<hr>
 			</div>
 		</div>
 		<div class="row row-content">
@@ -194,7 +204,8 @@
 
 	<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="js/scripts.js"></script>
     
 </body>
 

@@ -17,9 +17,11 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-default bg-dark fixed-top scrolling-navbar">
 		<div class="container">
-			<a class="navbar-brand" href="index.html">Find It</a>
+			<a class="navbar-brand" href="index.html">
+				<img src="/img/LogoMakr_8n4M9q.png" width="160" height="80" class="d-inline-block align-top" alt="" loading="lazy">
+			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle Navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -27,17 +29,17 @@
 			<div class="collapse navbar-collapse" id="navbarContent">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="index.html">Home</a>
+						<a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Explore<span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="#">Explore</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="">Pages</a>
+						<a class="nav-link" href="page.html">Pages</a>
 					</li>
 				</ul>
 
-				<span class="navbar-text">
+				<span class="navbar-text pr-3">
 					<a href="">Sign In </a>
 				</span>
 				<button class="btn btn-sm btn-primary" type="button">+ Add Listing</button>				
@@ -50,8 +52,8 @@
 	</header>
 
 	<div class="container">
-		<div class="row">
-			<div class="col-sm-3 sticky">
+		<div class="row row-content">
+			<div class="col-sm-3">
 				<div class="card border-secondary mb-3">
 					<div class="card-body text-center justify-content-center">
 						<form class="input-group input-group-sm mb-3">
@@ -113,10 +115,26 @@
 				</div>
 			</div>
 			<div class="col-sm-9">
+				<div class="row">
+					<div class="card-footer d-flex justify-content-between w-100">
+						<div class="flex-row mb-3">
+							<p class="card-text">77 Results</p>
+						</div>
+						<div class="flex-row-reverse">
+							<button class="btn btnn-sm btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort By</button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Name</a>
+								<a class="dropdown-item" href="#">Proximity</a>
+								<a class="dropdown-item" href="#">Price</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<div class="row row-cols-1 row-cols-md-2">
 					<div class="col mb-4">
 						<div class="card border-secondary mb-3">
-							<img src="..." class="card-img-top" alt="...">
+							<img src="/img/luxebeach.jpg" class="card-img-top" alt="...">
 							<div class="card-body">
 								<div>
 									<i class="fa fa-star"></i>
@@ -143,7 +161,7 @@
 					</div>
 					<div class="col mb-4">
 						<div class="card border-secondary mb-3">
-							<img src="..." class="card-img-top" alt="...">
+							<img src="/img/luxebeach.jpg" class="card-img-top" alt="...">
 							<div class="card-body">
 								<div>
 									<i class="fa fa-star"></i>
@@ -170,7 +188,7 @@
 					</div>
 					<div class="col mb-4">
 						<div class="card border-secondary mb-3">
-							<img src="..." class="card-img-top" alt="...">
+							<img src="/img/luxebeach.jpg" class="card-img-top" alt="...">
 							<div class="card-body">
 								<div>
 									<i class="fa fa-star"></i>
@@ -196,7 +214,7 @@
 						</div>
 					</div><div class="col mb-4">
 						<div class="card border-secondary mb-3">
-							<img src="..." class="card-img-top" alt="...">
+							<img src="/img/luxebeach.jpg" class="card-img-top" alt="...">
 							<div class="card-body">
 								<div>
 									<i class="fa fa-star"></i>
@@ -222,7 +240,7 @@
 						</div>
 					</div><div class="col mb-4">
 						<div class="card border-secondary mb-3">
-							<img src="..." class="card-img-top" alt="...">
+							<img src="/img/luxebeach.jpg" class="card-img-top" alt="...">
 							<div class="card-body">
 								<div>
 									<i class="fa fa-star"></i>
@@ -248,7 +266,7 @@
 						</div>
 					</div><div class="col mb-4">
 						<div class="card border-secondary mb-3">
-							<img src="..." class="card-img-top" alt="...">
+							<img src="/img/luxebeach.jpg" class="card-img-top" alt="...">
 							<div class="card-body">
 								<div>
 									<i class="fa fa-star"></i>
@@ -273,6 +291,17 @@
 							</div>
 						</div>
 					</div>
+				</div>
+				<div class="row justify-content-center">
+					<nav aria-label="Page navigation ">
+						<ul class="pagination">
+						  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+						  <li class="page-item"><a class="page-link" href="#">1</a></li>
+						  <li class="page-item"><a class="page-link" href="#">2</a></li>
+						  <li class="page-item"><a class="page-link" href="#">3</a></li>
+						  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+						</ul>
+					  </nav>
 				</div>
 			</div>
 		</div>
@@ -323,8 +352,8 @@
 
 	<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="js/scripts.js"></script>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="js/scripts.js"></script>
     
 </body>
 

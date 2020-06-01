@@ -1,5 +1,7 @@
 body, html {
 	height: 100%;
+	padding: 0px 0px 0px 0px;
+	z-index: 0;
 }
 
 .hero-image {
@@ -15,13 +17,148 @@ body, html {
 .input-group.md-form.form-sm.form-1 input {
 	border: 1px solid #bdbdbd;
 	border-top-right-radius: 0.25rem;
-	border-bottom-right-radius: 0.25rem: 
+	border-bottom-right-radius: 0.25rem;
 }
 
-.hero-form {
+.hero-div {
 	text-align: center;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.jumbotron {
+	background-image: url(../img/Somewhere+West+Drone+Shot.jpg);
+	height: 60%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.googleMap {
+	width: 100%;
+	height: 400px;
+}
+
+.bg-dark {
+	background: transparent !important;
+	transition: 0.75s ease;
+}
+
+.bg-dark.scrolled {
+	background: #000 !important;
+}
+
+.row-header{
+	margin: 0px auto;
+	padding: 25px 0px 0px 0px;
+}
+
+.row-content{
+	margin: 0px auto;
+	padding: 50px 0px 50px 0px;
+	border-bottom: 1px ridge;
+	min-height: 400px;
+}
+
+address{
+	font-size: 80%;
+	margin: 0px;
+	color: #0f0f0f;
+}
+
+.footer{
+	background-color: #60b0f4;
+	margin: 0px auto;
+	padding: 20px 0px 20px 0px;
+}
+
+.card-featured{
+    background:#FFF !important;
+    border-radius:6 !important;
+    padding:60px 10px !important;
+    margin:30px 0px !important;
+}
+.text-featured{
+    margin:20px 0px;
+}
+.span-featured {
+	font-size: 15px;
+}
+
+.fa-featured {
+     color:#4183D7;
+}
+
+.a-featured {
+	text-decoration:none; 
+  	color: #0062cc;
+  	border-bottom:2px solid #0062cc;
+}
+
+.p-search {
+	font: 13px monospace;
+	color: #FFFFFF;
+}
+
+.cntr {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.cntr .cntr-innr {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+/*** STYLES ***/
+.search {
+	display: inline-block;
+	position: relative;
+	height: 35px;
+	width: 35px;
+	box-sizing: border-box;
+	margin: 0px 8px 7px 0px;
+	padding: 7px 9px 0px 9px;
+	border: 3px solid #FFFFFF;
+	border-radius: 25px;
+	transition: all 200ms ease;
+	cursor: text;
+}
+
+.search:after {
+	content: "";
+	position: absolute;
+	width: 3px;
+	height: 20px;
+	right: -5px;
+	top: 21px;
+	background: #FFFFFF;
+	border-radius: 3px;
+	transform: rotate(-45deg);
+	transition: all 200ms ease;
+}
+
+.search.active,
+.search:hover {
+	width: 200px;
+	margin-right: 0px;
+}
+
+.search.active:after,
+.search:hover:after {
+	height: 0px;
+}
+
+.search input {
+	width: 100%;
+	border: none;
+	box-sizing: border-box;
+	font-family: Helvetica;
+	font-size: 15px;
+	color: inherit;
+	background: transparent;
+	outline-width: 0px;
 }
